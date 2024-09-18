@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hotel Booking App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    .jumbotron {
+      margin-bottom: 0px;
+    }
+    .footer {
+      background-color: #f1f1f1;
+      padding: 25px;
+    }
+    #intro-example {
+      height: 600px;
+    }
+    .main {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btn {
+      font-size: 30px;
+    }
+    #myNavbar {
+      font-size: 32px;
+    }
+    #nav-head {
+      font-size: 36px;
+    }
+    /* Flexbox styles to ensure the footer is at the bottom */
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+    }
+    .heaven {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      margin: 5px;
+    }
+    .logo {
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="flex-container">
+      <div class="content">
+        <div class="jumbotron text-center">
+          <h1>Welcome to Online Train Booking Application</h1>
+        </div>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#myNavbar"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="logo">
+                <img src="./photos/heaven.jpg" alt="" class="heaven" />
+                <a class="navbar-brand" href="#" id="nav-head">HotelHeaven</a>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Body Section -->
+        <!-- <div
+          id="intro-example"
+          class="p-5 text-center bg-image"
+          style="
+            /* want to add img */
+            background: url('./photos/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+          "
+        > -->
+        <div
+        id="intro-example"
+        class="p-5 text-center bg-image"
+        style="background-image: url('https://cdn.discordapp.com/attachments/1282032444970766346/1285465117206646885/bg.jpg?ex=66ea5e2e&is=66e90cae&hm=c9d2d6b7d3a113be930d96aea3e9f3fa96e5b625fbbfa87830cf97a32e9da86f&https://mdbcdn.b-cdn.net/img/new/slides/041.webp'); background-repeat:no-repeat; background-size: cover; margin-top: 0px;"
+        >
+        <!-- <div
+        id="intro-example"
+        class="p-5 text-center bg-image"
+        style="background-image: url('assets/heaven.jpg'); background-repeat:no-repeat; background-size: cover; margin-top: 0px;"
+        > -->
+          <div class="main">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <!-- <a href="admin_login_page.html"> -->
+                  <a th:href="@{/admin-login}">
+                    <button type="button" class="btn btn-primary">Admin</button>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <!-- <a href="user_login_page.html"> -->
+                  <a th:href="@{/user-login}">
+                    <button type="button" class="btn btn-success">User</button>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <!-- <a href="Hotel_search_page.html"> -->
+                  <a th:href="@{/search-train}">
+                    <button type="button" class="btn btn-warning">
+                      Hotel(Search)
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron text-center footer">
+        <p>&copy; 2024 Hotel Booking App. All rights reserved.</p>
+        <p>
+          <a th:href="@{/privacy-policy}" href="#">Privacy Policy</a> |
+          <a th:href="@{/terms-of-service}" href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
